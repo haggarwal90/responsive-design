@@ -150,6 +150,10 @@ header li{
     margin-bottom: 10px;
 }
 
+.feed p{
+    color: #dae1e7;
+}
+
 .feed-header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -198,3 +202,22 @@ header li{
 footer{
     padding-top: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #showcase .container p {
+        width: 100%;
+    }
+    #timeline .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #timeline .container .contribution{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #timeline .container .feeds{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+  }
