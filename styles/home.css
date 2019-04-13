@@ -153,6 +153,7 @@ header li{
 .feed-header{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    font-size: 12px;
 }
 
 .feed-header span{
