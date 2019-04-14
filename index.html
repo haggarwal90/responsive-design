@@ -6,21 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Developer | Himanshu</title>
     <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
                 <h1><div class="highlight-top">Web<span class="highlight">Web</span></div> <div class="highlight-bottom">Developer<span class="highlight">Developer</span></div></h1>
+                <label id="mobile-menu"><input id="menu-button" type="checkbox" onclick="toggleClass()">Menu</label>
             </div>
-            <nav>
+            <nav id="menu-bar">
                 <ul>
                     <li class="current"><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
-        </div>
-        
+        </div>        
         <hr class="divider" />
     </header>
     <section id="showcase">
@@ -33,14 +34,14 @@
     <section id="timeline">
         <div class="container">
             <section class="contribution">
-                <h3>Open Source Contribution</h3>
+                <h3><i class="fas fa-donate"></i> Open Source Contribution</h3>
                 <ul>
                     <li>
                         <span class="name">accessible-carousel</span>
                         <span class="description">Accessible carousel. It supports accessibility, responsive, touch swipe, auto swipe and etc.</span>
                         <div class="about">
                             <span class="type">Javascript</span>
-                            <span class="stars">5</span>
+                            <span class="stars"><i class="far fa-star"></i> 5</span>
                             <span class="updated">Updated on Nov 10, 2018</span>
                         </div>
                         <hr class="divider" />
@@ -50,7 +51,7 @@
                         <span class="description">Accessible carousel. It supports accessibility, responsive, touch swipe, auto swipe and etc.</span>
                         <div class="about">
                             <span class="type">Javascript</span>
-                            <span class="stars">5</span>
+                            <span class="stars"><i class="far fa-star"></i> 5</span>
                             <span class="updated">Updated on Nov 10, 2018</span>
                         </div>
                         <hr class="divider" />
@@ -60,7 +61,7 @@
                         <span class="description">Accessible carousel. It supports accessibility, responsive, touch swipe, auto swipe and etc.</span>
                         <div class="about">
                             <span class="type">Javascript</span>
-                            <span class="stars">5</span>
+                            <span class="stars"><i class="far fa-star"></i> 5</span>
                             <span class="updated">Updated on Nov 10, 2018</span>
                         </div>
                     </li>
@@ -70,7 +71,7 @@
                 </footer>  
             </section>
             <section class="feeds">
-                <h3>Posts</h3>
+                <h3><i class="fas fa-blog"></i> Posts</h3>
                 <div class="feed">
                     <div class="feed-header">
                         <h3>Funny Post</h3>
@@ -83,7 +84,7 @@
                 </div>
                 <div class="feed">
                     <div class="feed-header">
-                        <h3>ACCEPT YORSELF</h3>
+                        <h3>Accept Yourself</h3>
                         <span>April, 4 2018 at 13:08</span>
                     </div>
                     <p>There are many variations of passages of Lorem Ipsum available, 
@@ -93,6 +94,18 @@
                 </div>
             </section>
         </div>
-    </section>  
+    </section>
+    <script>
+        function toggleClass() {
+            var isChecked = document.getElementById("menu-button").checked;
+            if(isChecked) {
+                document.getElementById("mobile-menu").classList.add("isSelected");
+                document.getElementById("menu-bar").classList.add("show-menu-bar");
+            } else {
+                document.getElementById("mobile-menu").classList.remove("isSelected");
+                document.getElementById("menu-bar").classList.remove("show-menu-bar");
+            }
+        }
+    </script>
 </body>
 </html>

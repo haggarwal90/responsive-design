@@ -62,6 +62,10 @@ header{
     color: #ffffff;
 }
 
+#branding #mobile-menu{
+    display: none;
+}
+
 #branding .highlight-bottom{
     display: inline;
     position: relative;
@@ -104,6 +108,27 @@ header nav{
     display: inline;
     align-self: center;
     justify-self: right;
+}
+
+header .mobile-menu{
+    display: none;
+}
+
+header .mobile-menu #menu-label {
+    display: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: #ccc;
+    border-radius: 7px;
+}
+
+header .mobile-menu .isSelected{
+    background-color: red;
+}
+
+header .mobile-menu input[type=checkbox]{
+    position: relative;
+    top: 1px;
 }
 
 header li{
@@ -205,6 +230,40 @@ footer{
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+
+    #branding #mobile-menu{
+        display: block;
+        justify-self: right;
+        align-self: center;
+        border: 1px solid;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #mobile-menu input{
+        visibility: hidden;
+        width: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .isSelected{
+        font-weight: bold;
+    }
+
+    #menu-bar{
+        display: none;
+    }
+
+    #menu-bar.show-menu-bar{
+        display: block;
+    }
+
+    #branding{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
     #showcase .container p {
         width: 100%;
     }
@@ -219,5 +278,23 @@ footer{
 
     #timeline .container .feeds{
         grid-area: 1 / 1 / 2 / 2;
+    }
+
+    header .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    header nav{
+        justify-self: center;
+    }
+
+    header nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    header .mobile-menu #menu-label{
+        display: block;
     }
   }
